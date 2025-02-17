@@ -8,6 +8,7 @@ class ErrorBoundary extends React.Component<Props> {
     state = { temErro: false};
 
     static getDerivedStateFromError(error: Error) {
+        console.error(error);
         return { temErro: true };
     }
 
@@ -22,3 +23,5 @@ class ErrorBoundary extends React.Component<Props> {
         return this.props.children;
     }
 }
+
+export default ErrorBoundary;
